@@ -46,7 +46,7 @@ ventana = tk.Tk()
 ventana.title("Generador de Contraseñas")
 
 # Cambiar el ícono en la barra de título
-ruta_icono = "icon.ico"
+ruta_icono = "./images/icon.ico"
 imagen_icono = Image.open(ruta_icono)
 imagen_icono = imagen_icono.resize((16, 16))
 icono_ventana = ImageTk.PhotoImage(imagen_icono)
@@ -91,7 +91,7 @@ contrasena_entry.grid(column=0, row=4, columnspan=2, pady=10)
 ttk.Button(ventana, text="Generar Contraseña", command=generar_contrasena_y_mostrar).grid(column=0, row=5, pady=5, columnspan=2)
 
 # Configuración del botón de copiar con ícono
-icono_copiar = ImageTk.PhotoImage(Image.open("copy_icon.png").resize((20, 20)))
+icono_copiar = ImageTk.PhotoImage(Image.open("./images/copy_icon.png").resize((20, 20)))
 boton_copiar = ttk.Button(ventana, image=icono_copiar, command=copiar_contrasena)
 boton_copiar.grid(column=1, row=4, pady=5, padx=(20, 0), sticky=tk.W) 
 
